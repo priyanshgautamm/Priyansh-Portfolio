@@ -29,9 +29,16 @@
             overflow: hidden;
         }
 
-        .homeImage {
+        .myImage{
+            overflow: hidden;
+            width: 100%;
+            height: 100vh;
             position: absolute;
-            top: 0;
+            z-index: -1;
+        }
+        .homeImage{
+            position: absolute;
+            bottom: 0;
             z-index: -1;
         }
 
@@ -197,12 +204,13 @@
 
 
 
-        @media only screen and (max-width:400px) {
+@media only screen and (max-width:400px) {
     .homeImage{
-        display: none;
+        /* display: none; */
+        left: -1100px;
     }
     .sideMenu{
-        margin-right: 0px;
+        margin-right: 50px;
     }
     .header{
         /* background-color: aqua; */
@@ -218,27 +226,34 @@
     }
     .bottomBox{
         left: 50px;
-        bottom: 30px;
+        bottom: 70px;
     }
 
 
     .name{
         font-size: 60px;
+        position: absolute;
+        bottom: 0px;
     }
 
 
 
     .myDes{
         font-size: 15px;
+        position: absolute;
+        bottom: 420px;
     }
 
     #closeButton{
         top: 15%;
         right: 40px;
     }
+
+
     .ItemM{
         font-size: 80px;
         line-height: 90px;
+        /* font-weight: bold; */
     }
 }
     </style>
@@ -249,7 +264,9 @@
 
 <body>
 
-    <img src="imageHome.png" class="homeImage">
+    <div class="myImage">
+        <img src="imageHome.png" class="homeImage">
+    </div>
     <div class="header">
         <div class="logoDiv">
             <img src="logo.png" class="navLogo" style="position: relative; z-index: 100000000;">
