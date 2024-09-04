@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Font Links -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'DM Sans';
+            overflow: hidden;
+        }
+
+        .homeImage {
+            position: absolute;
+            top: 0;
+            z-index: -1;
+        }
+
+
+
+        .header {
+            width: 100%;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            /* background-color: aqua; */
+
+        }
+
+        .header .logoDiv {
+            height: 50px;
+            width: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 60px;
+        }
+
+        .header .logoDiv img {
+            height: 30px;
+            width: 30px;
+            cursor: pointer;
+        }
+
+        .sideMenu {
+            height: 50px;
+            width: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 55px;
+        }
+
+        .sideMenu img {
+            height: 30px;
+            height: 30px;
+            margin-top: 2px;
+        }
+
+        .bottomBox {
+            width: 60%;
+            height: 400px;
+            /* background-color: aquamarine; */
+            position: absolute;
+            bottom: 130px;
+            left: 130px;
+        }
+
+        .alingDesCont {
+            position: absolute;
+            bottom: 0;
+        }
+
+        .name {
+            font-size: 75px;
+            font-weight: bold;
+            margin-bottom: 70px;
+            letter-spacing: -3px;
+        }
+
+        .myDes {
+            font-size: 20px;
+            letter-spacing: -0.5px;
+        }
+
+        .knowMoreDes {
+            margin-top: 40px;
+            font-size: 13px;
+            color: #cccccc;
+            display: flex;
+            width: 173px;
+            /* background-color: blue; */
+            align-items: center;
+            cursor: pointer;
+        }
+
+
+
+        #menuBoxMain {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100vh;
+            transition: all 0.3s;
+            background-color: #000;
+            opacity: 0%;
+        }
+
+        .menuItems {
+            position: absolute;
+            /* background-color: aqua; */
+            width: 40%;
+            height: 70vh;
+            bottom: 200px;
+            left: 200px;
+        }
+
+        .menuItm {
+            overflow: hidden;
+            /* background-color: antiquewhite; */
+            /* margin-bottom: 5px; */
+        }
+
+        .ItemM {
+            color: #fff;
+            font-size: 120px;
+            line-height: 120px;
+            transition: all 0.7s;
+            cursor: pointer;
+            position: relative;
+            top: 150px;
+            animation-timing-function: cubic-bezier(0.65, 0, 0, 0.99);
+            /* background-color: antiquewhite; */
+
+
+            &:hover {
+                font-weight: bolder;
+            }
+        }
+
+        #bottomLineHome {
+            height: 5px;
+            width: 60px;
+            background-color: red;
+            position: absolute;
+            left: 30px;
+        }
+
+        #closeButton {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 1px solid #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            right: 40%;
+            top: 30vh;
+            font-size: 32px;
+            letter-spacing: -2px;
+            cursor: pointer;
+            transition: all 0.2s;
+            transform: rotate(20deg);
+
+            &:hover {
+                transform: rotate(5deg);
+
+            }
+        }
+    </style>
+
+
+    <title>Priyansh</title>
+</head>
+
+<body>
+
+    <img src="imageHome.png" class="homeImage">
+    <div class="header">
+        <div class="logoDiv">
+            <img src="logo.png" class="navLogo" style="position: relative; z-index: 100000000;">
+        </div>
+
+        <div class="sideMenu">
+            <img src="menuBarLogoImg.png" style="cursor: pointer;" onclick="openMenu()">
+        </div>
+    </div>
+
+
+    <div class="bottomBox">
+        <div class="alingDesCont">
+            <div class="name">
+                priyansh
+            </div>
+            <div class="myDes">
+                As a first-year B.Tech CSE student at <u style="cursor: pointer;">Sanskriti University</u>,<br>
+                I am rapidly enhancing my programming and web development skills.<br>
+                I am eager to bring my growing expertise to a dynamic organization and am open to hiring opportunities.
+            </div>
+            <div class="knowMoreDes">
+                KNOW MORE ABOUT ME
+                <svg xmlns="http://www.w3.org/2000/svg" style="margin-top: 0px; margin-left: 5px;" height="20px"
+                    viewBox="0 -960 960 960" width="20px" fill="#f33030">
+                    <path
+                        d="M682.54-461.73H206.15v-36.92h476.39L453.81-727.38 480-753.85 753.85-480 480-206.15l-26.19-26.47 228.73-229.11Z" />
+                </svg>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Menu code starts from here  -->
+
+
+
+    <div id="menuBoxMain">
+
+
+        <div id="closeButton" onclick="closeMenu()">
+            close
+        </div>
+
+        <div class="menuItems">
+            <div style="position: absolute; bottom: 0;">
+                <div class="menuItm">
+                    <div id="homeMe" onmouseover="changeItemTransition()" class="ItemM">home</div>
+                    <div id="bottomLineHome"></div>
+                </div>
+                <div class="menuItm">
+                    <div id="aboutMe" onmouseover="changeItemTransition()" class="ItemM">about</div>
+                    <div id="bottomLineAbout"></div>
+                </div>
+                <div class="menuItm">
+                    <div id="workMe" onmouseover="changeItemTransition()" class="ItemM">work</div>
+                    <div id="bottomLineWork"></div>
+                </div>
+                <div class="menuItm">
+                    <div id="contactMe" onmouseover="changeItemTransition()" class="ItemM">contact</div>
+                    <div id="bottomLineContact"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+
+<script>
+    var menuBxMain = document.getElementById("menuBoxMain");
+
+    var hometxt = document.getElementById("homeMe");
+    var abouttxt = document.getElementById("aboutMe");
+    var worktxt = document.getElementById("workMe");
+    var contacttxt = document.getElementById("contactMe");
+
+    function openMenu() {
+        menuBxMain.style.zIndex = "10";
+        // menuBxMain.style.backgroundColor = "#000";
+        menuBxMain.style.opacity = "100%";
+        menuBxMain.style.transitionDelay = "0s";
+
+        hometxt.style.top = "0px";
+        hometxt.style.transitionDelay = "1.3s";
+
+        abouttxt.style.top = "0px";
+        abouttxt.style.transitionDelay = "1.1s";
+
+        worktxt.style.top = "0px";
+        worktxt.style.transitionDelay = "0.9s";
+
+        contacttxt.style.top = "0px";
+        contacttxt.style.transitionDelay = "0.3s";
+    }
+
+    function changeItemTransition() {
+
+        hometxt.style.transitionDelay = "0s";
+        abouttxt.style.transitionDelay = "0s";
+        worktxt.style.transitionDelay = "0s";
+        contacttxt.style.transitionDelay = "0s";
+
+        hometxt.style.transitionDuration = "0.4s";
+        abouttxt.style.transitionDuration = "0.4s";
+        worktxt.style.transitionDuration = "0.4s";
+        contacttxt.style.transitionDuration = "0.4s";
+    }
+
+    function closeMenu() {
+
+        menuBxMain.style.zIndex = "-1";
+        // menuBxMain.style.backgroundColor = "#000";
+        menuBxMain.style.opacity = "0%";
+        menuBxMain.style.transitionDelay = "1.5s";
+
+
+        hometxt.style.top = "170px";
+        hometxt.style.transitionDelay = "1.3s";
+
+        abouttxt.style.top = "150px";
+        abouttxt.style.transitionDelay = "1.1s";
+
+        worktxt.style.top = "150px";
+        worktxt.style.transitionDelay = "0.9s";
+
+        contacttxt.style.top = "150px";
+        contacttxt.style.transitionDelay = "0.3s";
+
+
+    }
+</script>
+
+</html>
