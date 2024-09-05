@@ -17,194 +17,238 @@
 
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            background-color: #000;
-            color: #fff;
-            font-family: 'DM Sans';
-            overflow: hidden;
-        }
-
-        .myImage{
-            overflow: hidden;
-            width: 100%;
-            height: 100vh;
-            position: absolute;
-            z-index: -1;
-        }
-        .homeImage{
-            position: absolute;
-            bottom: 0;
-            z-index: -1;
-        }
-
-
-
-        .header {
-            width: 100%;
-            height: 100px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            /* background-color: aqua; */
-
-        }
-
-        .header .logoDiv {
-            height: 50px;
-            width: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-left: 60px;
-        }
-
-        .header .logoDiv img {
-            height: 30px;
-            width: 30px;
-            cursor: pointer;
-        }
-
-        .sideMenu {
-            height: 50px;
-            width: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 55px;
-        }
-
-        .sideMenu img {
-            height: 30px;
-            height: 30px;
-            margin-top: 2px;
-        }
-
-        .bottomBox {
-            width: 60%;
-            height: 400px;
-            /* background-color: aquamarine; */
-            position: absolute;
-            bottom: 130px;
-            left: 130px;
-        }
-
-        .alingDesCont {
-            position: absolute;
-            bottom: 0;
-        }
-
-        .name {
-            font-size: 75px;
-            font-weight: bold;
-            margin-bottom: 70px;
-            letter-spacing: -3px;
-        }
-
-        .myDes {
-            font-size: 20px;
-            letter-spacing: -0.5px;
-        }
-
-        .knowMoreDes {
-            margin-top: 40px;
-            font-size: 13px;
-            color: #cccccc;
-            display: flex;
-            width: 173px;
-            /* background-color: blue; */
-            align-items: center;
-            cursor: pointer;
-        }
+        *{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #000;
+    color: #fff;
+    font-family: 'DM Sans';
+    overflow: hidden;
+}
+.myImage{
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+    /* background-color: aqua; */
+}
+.homeImage{
+    position: absolute;
+    bottom: -50px;
+    /* top: 0; */
+    /* background-color: aquamarine; */
+    z-index: -1;
+}
 
 
 
-        #menuBoxMain {
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1;
-            width: 100%;
-            height: 100vh;
-            transition: all 0.3s;
-            background-color: #000;
-            opacity: 0%;
-        }
+.header{
+    width: 100vw;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: aqua; */
 
-        .menuItems {
-            position: absolute;
-            /* background-color: aqua; */
-            width: 40%;
-            height: 70vh;
-            bottom: 200px;
-            left: 200px;
-        }
+}
+.header .logoDiv {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 60px;
+}
+.header .logoDiv img{
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+.sideMenu{
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 55px;
+}
+.sideMenu img{
+    height: 30px;
+    height: 30px;
+    margin-top: 2px;
+}
+.bottomBox{
+    width: 60%;
+    height: 400px;
+    /* background-color: aquamarine; */
+    position: absolute;
+    bottom: 130px;
+    left: 130px;
+}
 
-        .menuItm {
-            overflow: hidden;
-            /* background-color: antiquewhite; */
-            /* margin-bottom: 5px; */
-        }
+.alingDesCont{
+    position: absolute;
+    bottom: 0;
+}
 
-        .ItemM {
-            color: #fff;
-            font-size: 120px;
-            line-height: 120px;
-            transition: all 0.7s;
-            cursor: pointer;
-            position: relative;
-            top: 150px;
-            animation-timing-function: cubic-bezier(0.65, 0, 0, 0.99);
-            /* background-color: antiquewhite; */
-
-
-            &:hover {
-                font-weight: bolder;
-            }
-        }
-
-        #bottomLineHome {
-            height: 5px;
-            width: 60px;
-            background-color: red;
-            position: absolute;
-            left: 30px;
-        }
-
-        #closeButton {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            border: 1px solid #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: absolute;
-            right: 40%;
-            top: 30vh;
-            font-size: 32px;
-            letter-spacing: -2px;
-            cursor: pointer;
-            transition: all 0.2s;
-            transform: rotate(20deg);
-
-            &:hover {
-                transform: rotate(5deg);
-
-            }
-        }
+.name{
+    font-size: 75px;
+    font-weight: bold;
+    margin-bottom: 70px;
+    letter-spacing: -3px;
+}
+.myDes{
+    font-size: 20px;
+    letter-spacing: -0.5px;
+}
+.knowMoreDes{
+    margin-top: 40px;
+    font-size: 13px;
+    color: #cccccc;
+    display: flex;
+    width: 173px;
+    /* background-color: blue; */
+    align-items: center;
+    cursor: pointer;
+}
 
 
 
+#menuBoxMain{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    transition: all 0.3s;
+    background-color: #000;
+    opacity: 0%;
+}
+.menuItems{
+    position: absolute;
+    /* background-color: aqua; */
+    width: 40%;
+    height: 70vh;
+    bottom: 200px;
+    left: 200px;
+}
+.menuItm{
+    overflow: hidden;
+    /* background-color: antiquewhite; */
+    /* margin-bottom: 5px; */
+}
+.ItemM{
+    color: #fff;
+    font-size: 120px;
+    line-height: 120px;
+    transition: all 0.7s;
+    cursor: pointer;
+    position: relative;
+    top: 150px;
+    animation-timing-function: cubic-bezier(0.65, 0, 0, 0.99);
+    /* background-color: antiquewhite; */
+
+    
+    &:hover{
+        font-weight: bolder;
+    }
+}
+#bottomLineHome{
+    height: 5px;
+    width: 60px;
+    background-color: red;
+    position: absolute;
+    left: 30px;
+}
+#closeButton{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 40%;
+    top: 30vh;
+    font-size: 32px;
+    letter-spacing: -2px;
+    cursor: pointer;
+    transition: all 0.2s;
+    transform: rotate(20deg);
+
+    &:hover{
+        transform: rotate(5deg);
+        
+    }
+}
+
+
+
+#aboutBoxMain{
+    width: 100%;
+    height: 0px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    border-top-left-radius: 80px;
+    border-top-right-radius: 80px;
+    transition: all 0.4s;
+    animation-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    z-index: 50;
+}
+.aboutHeading{
+    font-size: 40px;
+    color: #000;
+    font-weight: bold;
+    letter-spacing: -2px;
+    width: 100%;
+    position: absolute;
+    height: 180px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+.aboutDes{
+    color: #000;
+    width: 800px;
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%);
+    
+}
+
+.closeAbout{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    position: absolute;
+    top: 50px;
+    right: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    /* letter-spacing: -1px; */
+    cursor: pointer;
+    transform: rotate(10deg);
+    font-weight: 300;
+}
 
 
 
 
-@media only screen and (max-width:400px) {
+
+
+
+@media only screen and (max-width:500px) {
     .homeImage{
         /* display: none; */
         left: -1100px;
@@ -227,6 +271,8 @@
     .bottomBox{
         left: 50px;
         bottom: 70px;
+        height: 100vh;
+        /* background-color: aqua; */
     }
 
 
@@ -241,7 +287,8 @@
     .myDes{
         font-size: 15px;
         position: absolute;
-        bottom: 400px;
+        bottom: 650%;
+        /* top: 0; */
     }
 
     #closeButton{
@@ -255,6 +302,10 @@
         line-height: 90px;
         /* font-weight: bold; */
     }
+    .aboutDes{
+        width: 400px;
+        overflow: scroll;
+    }
 }
     </style>
 
@@ -263,7 +314,6 @@
 </head>
 
 <body>
-
     <div class="myImage">
         <img src="imageHome.png" class="homeImage">
     </div>
@@ -288,7 +338,7 @@
                 I am rapidly enhancing my programming and web development skills.<br>
                 I am eager to bring my growing expertise to a dynamic organization and am open to hiring opportunities.
             </div>
-            <div class="knowMoreDes">
+            <div class="knowMoreDes" onclick="openAbt()">
                 KNOW MORE ABOUT ME
                 <svg xmlns="http://www.w3.org/2000/svg" style="margin-top: 0px; margin-left: 5px;" height="20px"
                     viewBox="0 -960 960 960" width="20px" fill="#f33030">
@@ -300,6 +350,32 @@
     </div>
 
 
+
+
+
+
+
+    <div id="aboutBoxMain">
+        <div>
+        <div class="aboutHeading">
+            about priyansh
+            <div class="closeAbout" onclick="closeAbt()">
+                close
+            </div>
+        </div>
+        <div class="aboutDes">
+            Hi! I'm Priyansh Gautam, a passionate and aspiring programmer currently pursuing
+            my B.Tech in Computer Science Engineering at Sanskriti University.
+            Having completed my schooling from Shri Baba Saraswati Vidya Mandir,
+            I've always had a keen interest in technology and development.
+            Based in Mathura, I am driven by a love for learning and a desire to make a difference through code.
+            I am currently honing my skills in programming and web development,
+            becoming more proficient with each passing day.
+            I am open to opportunities for collaboration or projects where I can contribute and grow.
+            If you're looking for a committed individual with a fresh perspective, feel free to connect with me!
+        </div>
+        </div>
+    </div>
 
 
 
@@ -321,7 +397,7 @@
                     <div id="bottomLineHome"></div>
                 </div>
                 <div class="menuItm">
-                    <div id="aboutMe" onmouseover="changeItemTransition()" class="ItemM">about</div>
+                    <div id="aboutMe" onmouseover="changeItemTransition()" class="ItemM" onclick="openAbt()">about</div>
                     <div id="bottomLineAbout"></div>
                 </div>
                 <div class="menuItm">
@@ -335,6 +411,8 @@
             </div>
         </div>
     </div>
+
+
 
 
 
@@ -404,6 +482,14 @@
 
 
     }
+
+    var abtBoxMain =  document.getElementById("aboutBoxMain");
+function openAbt(){
+    abtBoxMain.style.height = "70vh";
+}
+function closeAbt() {
+    abtBoxMain.style.height = "0px";
+}
 </script>
 
 </html>
